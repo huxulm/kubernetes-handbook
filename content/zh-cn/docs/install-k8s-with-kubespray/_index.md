@@ -1,7 +1,7 @@
 ---
 title: Kubespray 安装 Kubernetes
 description: Kubespray 安装 Kubernetes
-weight: 1
+weight: 2
 ---
 本目录记录Kubespray 安装 Kubernetes 的基本过程.
 {{% pageinfo %}}
