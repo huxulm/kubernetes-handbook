@@ -1,6 +1,6 @@
 baseURL = "/"
-title = "Kubernetes运维手册"
-name = "Kubernetes运维手册"
+title = "Kubernetes 运维笔记"
+name = "Kubernetes 运维笔记"
 [author]
   name = "Huxulm"
   homepage = "https://github.com/huxulm"
