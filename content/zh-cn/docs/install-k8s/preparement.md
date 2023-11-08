@@ -5,17 +5,16 @@ weight: 1
 slug: node-prepare
 ---
 
-# 防火墙规则
-Master节点
-{{% pageinfo %}}
-2379,6443,10250,10251,10252 
-{{% /pageinfo %}}
+# 防火墙规则(TCP 入站)
+控制面节点 (Master Nodes)
+```
+2379-2380,6443,10250,10251,10252 
+```
 
-Worker节点
-{{% pageinfo %}}
+工作节点 (Worker Nodes)
+```
 10250,30000-32767
-{{% /pageinfo %}}
-
+```
 # 禁用交换分区 | 桥接流量
 {{< tabpane >}}
 {{<tab header="Master & Worker" disabled=true />}}
