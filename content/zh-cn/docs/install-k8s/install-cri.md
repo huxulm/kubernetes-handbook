@@ -44,6 +44,7 @@ $ tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.1.1.tgz
 {{</tabpane>}}
 
 ## 安装 Containerd
+[官方文档](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
 {{<tabpane>}}
 {{<tab header="Linux/amd64" lang="shell">}}
 $ tar Cxzvf /usr/local containerd-1.6.2-linux-amd64.tar.gz
