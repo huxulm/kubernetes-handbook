@@ -12,14 +12,14 @@ weight: 100
 
 ## APT 源配置
 {{<tabpane>}}
-{{<tab header="清华 tuna">}}
+{{<tab header="清华 tuna" lang="shell">}}
 apt-get update && \
     apt-get install -y apt-transport-https ca-certificates curl && \
     curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://dl.k8s.io/apt/doc/apt-key.gpg && \
     echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://mirrors.tuna.tsinghua.edu.cn/kubernetes/apt kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list && \
     apt-get update
 {{</tab>}}
-{{<tab header="中科大 USTC">}}
+{{<tab header="中科大 USTC" lang="shell">}}
 apt-get update && \
     apt-get install -y apt-transport-https ca-certificates curl && \
     curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://dl.k8s.io/apt/doc/apt-key.gpg && \
