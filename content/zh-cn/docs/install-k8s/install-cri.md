@@ -5,7 +5,8 @@ weight: 3
 slug: install-cri-containerd
 ---
 
-## 安装 runc 和 cni 插件
+## 方法一：从二进制安装包安装
+### 安装 runc 和 cni 插件
 从 Github 下载 Release 安装包
 - [runc](https://github.com/opencontainers/runc/releases)
 - [cni plugins](https://github.com/containernetworking/plugins/releases)
@@ -43,7 +44,7 @@ $ tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v1.1.1.tgz
 {{</tab>}}
 {{</tabpane>}}
 
-## 安装 Containerd
+### 安装 Containerd
 [官方文档](https://github.com/containerd/containerd/blob/main/docs/getting-started.md)
 {{<tabpane>}}
 {{<tab header="Linux/amd64" lang="shell">}}
@@ -83,5 +84,27 @@ containerd config default > /etc/containerd/config.toml
 {{<tab header="Linux/amd64" lang="shell">}}
 systemctl daemon-reload
 systemctl enable --now containerd
+{{</tab>}}
+{{</tabpane>}}
+ 
+##方法二：从 APT 源安装
+{{<tabpane>}}
+{{<tab header="Debian" lang="shell">}}
+# 安装依赖
+apt-get update
+apt-get install ca-certificates curl gnupg
+
+# 信任 Docker 的 GPG 公钥并添加仓库：
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# 安装
+apt-get update
+apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 {{</tab>}}
 {{</tabpane>}}

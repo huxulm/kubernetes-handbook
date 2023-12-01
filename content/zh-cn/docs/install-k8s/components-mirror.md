@@ -10,7 +10,7 @@ weight: 100
 |Kubernetes|https://mirrors.ustc.edu.cn/kubernetes/|
 |Kubernetes二进制|https://www.downloadkubernetes.com/|
 
-## APT 源配置
+## kubernetes APT 源配置
 {{<tabpane>}}
 {{<tab header="清华 tuna" lang="shell">}}
 apt-get update && \
