@@ -87,7 +87,7 @@ systemctl enable --now containerd
 {{</tab>}}
 {{</tabpane>}}
  
-##方法二：从 APT 源安装
+## 方法二：从 APT 源安装
 {{<tabpane>}}
 {{<tab header="Debian" lang="shell">}}
 # 安装依赖
@@ -105,6 +105,6 @@ echo \
 
 # 安装
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get install containerd.io
 {{</tab>}}
 {{</tabpane>}}
