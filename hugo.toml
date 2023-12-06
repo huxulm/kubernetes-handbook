@@ -205,8 +205,14 @@ enable = true
   icon = "fa fa-envelope"
   desc = "Discuss development issues around the project"
 
-# hugo module configuration
+[[params.tools]]
+  name = "Kubernetes 路线"
+  url = "https://roadmap.sh/kubernetes"
+[[params.tools]]
+  name = "DevOps 路线"
+  url = "https://roadmap.sh/devops"
 
+# hugo module configuration
 [module]
   # uncomment line below for temporary local development of module
   replacements = "github.com/google/docsy -> docsy"
